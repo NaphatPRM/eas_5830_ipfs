@@ -26,7 +26,7 @@ def pin_to_ipfs(data):
       },
       body: formData,
     });
-    const response = await request.json();
+  	const response = await request.json();
     return response.id
   } catch (error) {
     console.log(error);
