@@ -27,7 +27,7 @@ def get_from_ipfs(cid,content_type="json"):
 	assert isinstance(cid,str), f"get_from_ipfs accepts a cid in the form of a string"
 	#YOUR CODE HERE	
 	# Send the GET request
-	url = "https://copper-changing-roadrunner-585.mypinata.cloud/ipfs/" + cid
+	url = "https://gateway.pinata.cloud/ipfs/" + cid
 	headers = {'Authorization': f'Bearer {jwt}'}
 
 	data = requests.get(url, headers=headers)
