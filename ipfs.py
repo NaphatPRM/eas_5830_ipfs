@@ -21,7 +21,7 @@ def pin_to_ipfs(data):
 	response.raise_for_status()  # Raise an error for bad responses
 
   # Parse response and return the CID or file ID
-	return response.json().get('id')
+	return response.json().get('data').get('cid')
 
 def get_from_ipfs(cid,content_type="json"):
 	assert isinstance(cid,str), f"get_from_ipfs accepts a cid in the form of a string"
